@@ -10,10 +10,14 @@ var listaNum =[];
 var cont = 0;
 
 for (var i = 0; i < 5; i++) {
-  memo.push(Math.floor(Math.random()*100 + 1));
+  var numRan = Math.floor(Math.random()*100 + 1);
+  if (!memo.includes(numRan)){
+    memo.push(numRan);
 }
-
-
+  else{
+    i--;
+  }
+}
 alert(memo);
 
 
