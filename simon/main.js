@@ -15,6 +15,8 @@ for (var i = 0; i < 5; i++) {
 
 alert(memo);
 
+
+
 console.log(memo);
  setTimeout(visti, 30000);
 
@@ -38,3 +40,33 @@ console.log(memo);
     alert('hai azzeccato numeri ' + cont);
 
   }
+
+
+var miolancio, tuolancio, clikka;
+
+clikka = document.getElementById('bottone');
+
+clikka.addEventListener('click',tiraUnDado);
+
+function tiraUnDado(){
+
+
+  // // genero i due lanci random da 1 a 6
+  miolancio = Math.floor(Math.random() * 6) + 1;
+  tuolancio = Math.floor(Math.random() * 6) + 1;
+
+  // // confronto le due var e dichiaro il vincit
+  if (miolancio > tuolancio){
+    document.getElementById('mio-id').innerHTML = 'il mio lancio: '+ miolancio + '; il tuo lancio: ' + tuolancio + '; quindi non hai vinto';
+    //  }
+  }
+  else if (miolancio < tuolancio){
+    document.getElementById('mio-id').innerHTML = 'il mio lancio: '+ miolancio + '; il tuo lancio: ' + tuolancio + '; quindi hai vinto';
+    //  }
+  }
+  //
+  else{
+    document.getElementById('mio-id').innerHTML = 'il mio lancio: '+ miolancio + '; il tuo lancio: ' + tuolancio + '; quindi tira ancora';
+     }
+  //
+}
