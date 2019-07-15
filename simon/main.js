@@ -5,6 +5,8 @@
 // creo un array in cui pusho i 5 num random
 
 var memo = [];
+var listaNum =[];
+var cont = 0;
 
 for (var i = 0; i < 5; i++) {
   memo.push(Math.floor(Math.random()*100 + 1));
@@ -12,3 +14,27 @@ for (var i = 0; i < 5; i++) {
 
 
 alert(memo);
+
+console.log(memo);
+ setTimeout(visti, 30000);
+
+  function visti(){
+    for (var j = 0; j < 5; j++) {
+
+      var v = parseInt(prompt('hai visto il num:'));
+
+      listaNum.push(v);
+    }
+    console.log(listaNum);
+
+
+
+    for (var i = 0; i < 5; i++) {
+      if(memo.includes(listaNum[i])){
+        cont++;
+      }
+
+    }
+    alert('hai azzeccato numeri ' + cont);
+
+  }
