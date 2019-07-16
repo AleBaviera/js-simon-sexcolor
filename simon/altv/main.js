@@ -4,10 +4,11 @@
 // Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati;
 
 // creo un array in cui pusho i 5 num random
-var miolancio, tuolancio, clikka;
+var clikka;
 var memo = [];
 var listaNum =[];
 var cont = 0;
+var listaPresi = [];
 
 for (var i = 0; i < 5; i++) {
   var numRan = Math.floor(Math.random()*100 + 1);
@@ -37,12 +38,14 @@ console.log(memo);
 
 
     for (var i = 0; i < 5; i++) {
+
       if(memo.includes(listaNum[i])){
         cont++;
+        listaPresi.push(listaNum[i]);
       }
 
     }
-    alert('hai azzeccato numeri ' + cont);
+    alert('hai azzeccato numeri ' + cont + ' che sono: ' + listaPresi);
 
   }
 
@@ -57,7 +60,7 @@ clikka.addEventListener('click',tiraUnDado);
 
 function tiraUnDado(){
 
-
+  var miolancio, tuolancio;
   // // genero i due lanci random da 1 a 6
   miolancio = Math.floor(Math.random() * 6) + 1;
   tuolancio = Math.floor(Math.random() * 6) + 1;

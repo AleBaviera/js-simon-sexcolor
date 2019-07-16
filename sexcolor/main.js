@@ -17,4 +17,4 @@ else{
   element.style.color = 'pink';
 }
 
-element.innerHTML = 'ciao ' + nome;
+element.innerHTML = nome ;

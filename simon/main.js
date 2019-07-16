@@ -7,6 +7,7 @@
 var memo = [];
 var listaNum =[];
 var cont = 0;
+var listaPresi = [];
 
 for (var i = 0; i < 5; i++) {
   memo.push(Math.floor(Math.random()*100 + 1));
@@ -33,10 +34,11 @@ console.log(memo);
 
     for (var i = 0; i < 5; i++) {
       if(memo.includes(listaNum[i])){
+        listaPresi.push(listaNum[i]);
         cont++;
       }
 
     }
-    alert('hai azzeccato numeri ' + cont);
+    alert('hai azzeccato numeri ' + cont + ' che sono: ' + listaPresi);
 
   }
